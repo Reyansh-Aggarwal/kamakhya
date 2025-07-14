@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
-
+import logo from "../assets/kamakhya-icon.png";
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -28,7 +28,7 @@ export const Navbar = () => {
             <a 
             className="text-primary/80 hover:text-primary"
             href = "#hero">
-                 <img src = "/kamakhya-icon.png" className="h-[5rem] w-auto"/>
+                 <img src = {logo} className="h-[5rem] w-auto"/>
             </a>
             <a 
             className="text-primary/80 hover:text-primary"

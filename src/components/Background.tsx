@@ -14,7 +14,7 @@ export const Background = () => {
     }, []);
 
     return (
-    <div className="bg-[#dedede] min-h-fit h-full w-full absolute inset-0 z-0 fixed ">
+    <div className="bg-[#dedede] min-h-fit h-full w-full inset-0 z-0 fixed">
         <div
             className="pointer-events-none absolute w-30 h-30 rounded-full bg-[#fe477c] blur-2xl"
             ref = {cursorRef}
