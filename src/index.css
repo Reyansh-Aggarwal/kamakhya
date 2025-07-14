@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-style: normal;
+}
+
+@theme {
+  --font-satoshi: "Satoshi", sans-serif;
+  --tracking-tightest: -0.08em; 
+
+  --color-border: (var(--border));
+  --color-background: (var(--background));
+  --color-foreground: (var(--foreground));
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: (var(--primary-foreground));
+  
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-fade-in-delay: fade-in 0.8s ease-out 0.2s forwards;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity:1;
+    }
+  }
+
+
+}
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --primary: #eb0e54;
+  }
+  .dark {
+    /* Dark Mode */
+
+  }
+  * {
+    cursor:none !important;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply transition-colors duration-300 font-satoshi font-medium;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+@utility container {
+  margin-inline:auto;
+  padding-inline: 2rem;
+}
+#root {
+  max-width:100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align:center;
+}
