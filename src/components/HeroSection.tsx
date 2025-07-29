@@ -9,7 +9,7 @@ export const HeroSection = () => {
                     one conversation at a time.
                 </div>
             </div>
-            <div className = "flex flex-row space-x-18">
+            <div className = "flex flex-row gap-14 md:gap-24 lg:gap-32">
                 <MyButton name = "Join Us" toLocation="joinPage"/>
                 <MyButton name = "Collaborate" toLocation="joinPage"/>
             </div>

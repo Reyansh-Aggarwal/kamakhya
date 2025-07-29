@@ -20,6 +20,8 @@
   
   --animate-fade-in: fade-in 0.8s ease-out forwards;
   --animate-fade-in-delay: fade-in 0.8s ease-out 0.2s forwards;
+  --animate-enter-bg: enter-bg 10s ease-out forwards;
+  --animate-enter-bg-portrait: enter-bg-portrait 5s ease-out forwards;
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -28,7 +30,26 @@
       opacity:1;
     }
   }
-
+  @keyframes enter-bg {
+      from{
+          width: 0;
+          height:0;
+      }
+      to {
+          width: 200dvw;
+          height: 200dvw;
+      }
+  }
+  @keyframes enter-bg-portrait {
+      from {
+          width: 100dvw;
+          height: 0;
+      }
+      to {
+          width: 100dvw;
+          height: 100dvh;
+      }
+  }
 
 }
 
