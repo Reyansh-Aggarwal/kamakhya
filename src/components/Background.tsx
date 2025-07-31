@@ -15,11 +15,11 @@ export const Background = () => {
 
     return (
     <div className="bg-[#ffff] min-h-fit h-full w-full inset-0 z-0 fixed">
-      <div className = "bg-[#dedede] rounded-br-full blur-md flex top-0 left-0 lg:animate-enter-bg animate-enter-bg-portrait fixed z-0"
+      <div className = "bg-[#ededed] md:rounded-full blur-md flex top-0 left-0 md:top-1/2 md:left-1/2 md:w-4 md:h-4 md:animate-enter-bg animate-enter-bg-portrait fixed z-0"
       style = {{}}/>
         
         <div
-            className="pointer-events-none absolute w-30 h-30 bg-[#fe477c] blur-xl"
+            className="pointer-events-none absolute w-30 h-30 bg-[#fe477c] touch:hidden visible blur-xl"
             ref = {cursorRef}
             style = {{transform: "translate(-50%, -50%)"}}
         />

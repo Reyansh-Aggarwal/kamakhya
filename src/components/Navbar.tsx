@@ -16,7 +16,7 @@ export const Navbar = () => {
 
     return (
     <nav className={cn(
-        "bg-transparent w-full h-fit fixed px-3 inset-0 z-50 transition-all duration-300 select-none cursor-none",
+        "bg-transparent w-full h-fit fixed px-3 inset-0 z-50 transition-all animate-move-up select-none cursor-none",
         isScrolled ? "py-2 bg-white/20 backdrop-blur-md shadow-md" : "py-2"
     )}>
         <div className="container w-full items-center justify-center flex flex-row space-x-6 text-3xl">

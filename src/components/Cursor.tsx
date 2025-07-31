@@ -23,7 +23,7 @@ export const Cursor = () => {
       className={cn(
         "fixed pointer-events-none w-12 h-12 bg-white/10 rounded-full ",
         "border border-white/20 shadow-lg backdrop-blur-[4px]",
-        " z-[80] cursor-none")}
+        " z-[80] cursor-none touch:hidden visible")}
       style={{ transform: "translate(-50%, -50%)"}}
     >
         
