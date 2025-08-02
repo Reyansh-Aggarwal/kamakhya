@@ -32,7 +32,7 @@ export const AboutUs = () => {
           Project Kamakhya is a student-led initiative promoting sustainable menstruation through fun, educational workshops.
           We empower underprivileged girls and women with awareness and eco-friendly pads—one cycle at a time.
         </div>
-        <div className="grid md:grid-rows-2 grid-rows-3 auto-cols-auto gap-2 overflow-hidden h-96">
+        <div className="grid md:grid-rows-2 grid-rows-3 auto-cols-auto gap-2 h-96">
           
           {tiles.map((tile, index) => (
             <div key={index} className={`${tile.height} ${tile.width} ${tile.animation} opacity-0`}>

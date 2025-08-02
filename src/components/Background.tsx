@@ -1,6 +1,6 @@
 import { useEffect, useRef} from 'react';
-//import bgImage from "../assets/bg-image.png"; not used
-import bgImageGray from "../assets/bg-image-gray.png";
+import bgImage from "../assets/bg-image.png";
+//import bgImageGray from "../assets/bg-image-gray.png"; old
 export const Background = () => {
     const cursorRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -14,8 +14,8 @@ export const Background = () => {
     }, []);
 
     return (
-    <div className="bg-[#ffff] min-h-fit h-full w-full inset-0 z-0 fixed">
-      <div className = "bg-[#ededed] md:rounded-full blur-md flex top-0 left-0 md:top-1/2 md:left-1/2 md:w-4 md:h-4 md:animate-enter-bg animate-enter-bg-portrait fixed z-0"
+    <div className="bg-[#fefefe] min-h-fit h-full w-full inset-0 z-0 fixed">
+      <div className = "bg-[#cdcdcd] md:rounded-full blur-md flex top-0 left-0 md:top-1/2 md:left-1/2 md:w-4 md:h-4 md:animate-enter-bg animate-enter-bg-portrait fixed z-0"
       style = {{}}/>
         
         <div
@@ -23,6 +23,6 @@ export const Background = () => {
             ref = {cursorRef}
             style = {{transform: "translate(-50%, -50%)"}}
         />
-        <img src = {bgImageGray} className="select-none absolute h-auto w-dvw"/>
+        <img src = {bgImage} className="select-none absolute h-auto w-dvw"/>
     </div>);
 };

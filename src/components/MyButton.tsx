@@ -16,7 +16,8 @@ export function MyButton(props: ButtonProps) {
             className={cn(
             "rounded-[32px]",
             "shadow-[0_6px_9.3px_0_rgba(0,0,0,0.38)]",
-            "bg-gradient-to-br from-[#FFC8D6] to-[#F09BAB]"
+            "bg-gradient-to-br from-[#FFC8D6] to-[#F09BAB]",
+            "hover:scale-110 transition-all duration-300"
             )} 
             onClick = {handleClick}>
                 <div className={cn(

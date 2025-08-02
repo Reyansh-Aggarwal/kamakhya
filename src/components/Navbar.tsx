@@ -16,22 +16,23 @@ export const Navbar = () => {
 
     return (
     <nav className={cn(
-        "bg-transparent w-full h-fit fixed px-3 inset-0 z-50 transition-all animate-move-up select-none cursor-none",
-        isScrolled ? "py-2 bg-white/20 backdrop-blur-md shadow-md" : "py-2"
+        "bg-transparent w-full h-fit fixed inset-0 z-50 transition-all animate-move-up select-none cursor-none"
     )}>
-        <div className="container w-full items-center justify-center flex flex-row space-x-6 text-3xl">
+        <div className={cn(
+          "container w-fit p-16 lg:px-24 items-center justify-center flex flex-row space-x-6 text-lg lg:text-xl rounded-full transition-all duration-500",
+          isScrolled ? "py-0.5 bg-white/25 backdrop-blur-md shadow-md mt-3" : "py-0.5")}>
             <a 
-            className="text-primary/80 hover:text-primary"
+            className="text-primary/70 hover:text-primary"
             href = "">
                 Awards  
             </a>
             <a 
-            className="text-primary/80 hover:text-primary"
+            className="text-primary/70 hover:text-primary"
             href = "#hero">
-                 <img src = {logo} className="h-[5rem] w-auto"/>
+                 <img src = {logo} className="h-14 lg:h-16 w-auto"/>
             </a>
             <a 
-            className="text-primary/80 hover:text-primary"
+            className="text-primary/70 hover:text-primary"
             href = "">
                 Events 
             </a>

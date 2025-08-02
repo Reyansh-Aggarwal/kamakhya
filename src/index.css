@@ -1,112 +1,114 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
-  font-weight: 300 900;
-  font-style: normal;
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Variable.ttf") format("truetype");
+    font-weight: 300 900;
+    font-style: normal;
 }
 
 @theme {
-  --breakpoint-touch: '(pointer: coarse)';
-  
-  --font-satoshi: "Satoshi", sans-serif;
-  --tracking-tightest: -0.08em; 
+    --breakpoint-touch: "(pointer: coarse)";
 
-  --color-border: (var(--border));
-  --color-background: (var(--background));
-  --color-foreground: (var(--foreground));
+    --font-satoshi: "Satoshi", sans-serif;
+    --tracking-tightest: -0.08em;
 
-  --color-primary: var(--primary);
-  --color-primary-foreground: (var(--primary-foreground));
-  
-  --animate-fade-in: fade-in 0.8s ease-out 1s forwards;
-  --animate-fade-in-delay: fade-in 0.8s ease-out 1.2s forwards;
-  --animate-enter-bg: enter-bg 10s ease-out 1s forwards;
-  --animate-enter-bg-portrait: enter-bg-portrait 5s ease-out forwards;
-  --animate-move-up: move-up 1s ease-out forwards;
-  --animate-move-up-delay-1: move-up 1s ease-out 0.2s forwards;
-  --animate-move-up-delay-2: move-up 1s ease-out 0.4s forwards;
-  --animate-bento-enter-1: bento-enter 1s ease-in-out 0.6s forwards;
-  --animate-bento-enter-2: bento-enter 1s ease-in-out 0.8s forwards;
-  --animate-bento-enter-3: bento-enter 1s ease-in-out 1s forwards;
-  --animate-bento-enter-4: bento-enter 1s ease-in-out 1.2s forwards;
-  --animate-bento-enter-5: bento-enter 1s ease-in-out 1.4s forwards;
-  @keyframes fade-in {
-    from {
-      opacity: 0;
+    --color-border: (var(--border));
+    --color-background: (var(--background));
+    --color-foreground: (var(--foreground));
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: (var(--primary-foreground));
+
+    --animate-fade-in: fade-in 0.8s ease-out forwards;
+    --animate-fade-in-delay: fade-in 0.8s ease-out 1s forwards;
+    --animate-enter-bg: enter-bg 10s ease-out 1s forwards;
+    --animate-enter-bg-portrait: enter-bg-portrait 2s ease-out forwards;
+    --animate-move-up: move-up 1s ease-out forwards;
+    --animate-move-up-delay-1: move-up 1s ease-out 0.2s forwards;
+    --animate-move-up-delay-2: move-up 1s ease-out 0.4s forwards;
+    --animate-move-up-delay-3: move-up 1s ease-out 0.6s forwards;
+    --animate-bento-enter-1: bento-enter 1s ease-in-out 0.4s forwards;
+    --animate-bento-enter-2: bento-enter 1s ease-in-out 0.5s forwards;
+    --animate-bento-enter-3: bento-enter 1s ease-in-out 0.6s forwards;
+    --animate-bento-enter-4: bento-enter 1s ease-in-out 0.7s forwards;
+    --animate-bento-enter-5: bento-enter 1s ease-in-out 0.8s forwards;
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-    to {
-      opacity:1;
+    @keyframes move-up {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-  }
-  @keyframes move-up {
-      from {
-          opacity: 0;
-          transform: translateY(30px);
-      }
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
-  }
-  @keyframes enter-bg {
-      from{
-          transform: scale(0);
-      }
-      to {
-          transform: scale(200);
-      }
-  }
-  @keyframes enter-bg-portrait {
-      from {
-          width: 100dvw;
-          height: 0;
-      }
-      to {
-          width: 100dvw;
-          height: 100dvh;
-      }
-  }
-  @keyframes bento-enter {
-      from {
-          opacity:0;
-          transform: translateX(80vw);
-      }
-      to {
-          opacity:1;
-          transform: translateX(0);
-      }
-  }
+    @keyframes enter-bg {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(200);
+        }
+    }
+    @keyframes enter-bg-portrait {
+        from {
+            width: 100dvw;
+            height: 0;
+        }
+        to {
+            width: 100dvw;
+            height: 100dvh;
+        }
+    }
+    @keyframes bento-enter {
+        from {
+            opacity: 0;
+            transform: translateY(60px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
 
 @layer base {
-  :root {
-    /* Light Mode */
-    --primary: #eb0e54;
-  }
-  .dark {
-    /* Dark Mode */
-
-  }
-  * {
-    cursor:none !important;
-  }
-  html {
-    @apply scroll-smooth;
-  }
-  body {
-    @apply transition-colors duration-300 font-satoshi font-medium;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
+    :root {
+        /* Light Mode */
+        --primary: #eb0e54;
+    }
+    .dark {
+        /* Dark Mode */
+    }
+    * {
+        cursor: none !important;
+    }
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply transition-colors duration-300 font-satoshi font-medium;
+        font-feature-settings:
+            "rlig" 1,
+            "calt" 1;
+    }
 }
 @utility container {
-  margin-inline:auto;
-  padding-inline: 2rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
 }
 #root {
-  max-width:100%;
-  margin: 0 auto;
-  padding: 0;
-  text-align:center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
 }
